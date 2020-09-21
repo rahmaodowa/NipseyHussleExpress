@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Long Live Nipsey Hussle</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="one">
+  <h1>Long Live Nipsey Hussle</h1>
+  <span>August 15, 1985-March 31, 2019</span>
+  <h2> The Marathon Continues </h2>
+</section>
+
+<section id="container">
+  <button id="btn">Generate</button>
+  <section id="output">Quotes</section>
+  <span><i class="fa fa-flag-checkered" aria-hidden="true"></i></span>
+</section>
+<section id="container2">
+  <h4>Fan Love</h3>
+  <ul class="messages">
+  <% for(var i=0; i<messages.length; i++) {%>
+    <li class="message">
+      <span><%= messages[i].name %></span>
+      <span><%= messages[i].msg %></span>
+      <span><%= messages[i].thumbUp %></span>
+      <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+
+    </li>
+  <% } %>
+  </ul>
+
+
+
+  <h3>Favorite Nipsey project or song?</h3>
+
+  <form action="/messages" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="message" name="msg">
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+
+
+  <script src="main.js"></script>
+
+</body>
+</html>
